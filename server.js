@@ -20,7 +20,7 @@ for (const k of ["ANTHROPIC_API_KEY", "GEMINI_API_KEY"]) {
 
 const PORT = process.env.PORT || 3000;
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5-5";
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.8-flash";
 const PUBLIC_DIR = path.join(__dirname, "public");
 
 const MIME = {
