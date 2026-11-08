@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinanceAI · Câmbio, bolsa e assistente com IA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Finance<span>AI</span></h1>
+    <p>Conversor de moedas, cotações da bolsa e um assistente de IA que explica o mercado.</p>
+  </header>
+
+  <main class="grid">
+    <section class="card" aria-labelledby="conv-title">
+      <h2 id="conv-title">Conversor de moedas</h2>
+      <div class="row">
+        <input id="amount" type="number" min="0" step="any" value="100" aria-label="Valor" />
+        <select id="from" aria-label="De"></select>
+        <button id="swap" title="Inverter moedas" aria-label="Inverter moedas">⇄</button>
+        <select id="to" aria-label="Para"></select>
+      </div>
+      <p id="result" class="result">—</p>
+      <p id="rate-info" class="muted"></p>
+    </section>
+
+    <section class="card" aria-labelledby="fx-title">
+      <h2 id="fx-title">Câmbio (em R$)</h2>
+      <ul id="fx-list" class="quotes"><li class="muted">Carregando…</li></ul>
+    </section>
+
+    <section class="card" aria-labelledby="stocks-title">
+      <h2 id="stocks-title">Bolsa (B3)</h2>
+      <ul id="stocks-list" class="quotes"><li class="muted">Carregando…</li></ul>
+      <p class="muted small">Dados com atraso. Fontes: AwesomeAPI e brapi.dev.</p>
+    </section>
+
+    <section class="card chat" aria-labelledby="chat-title">
+      <h2 id="chat-title">Assistente com IA</h2>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="msg bot">Oi! Pergunte sobre as cotações da tela ou peça para eu explicar algum conceito financeiro. 📈</div>
+      </div>
+      <div class="suggestions">
+        <button class="chip">O que significa a variação do dólar hoje?</button>
+        <button class="chip">Explique o que é uma ação em linguagem simples</button>
+        <button class="chip">Por que o câmbio muda todo dia?</button>
+      </div>
+      <form id="chat-form" class="row">
+        <input id="chat-input" type="text" placeholder="Digite sua pergunta…" maxlength="500" autocomplete="off" required />
+        <button type="submit" id="send">Enviar</button>
+      </form>
+      <p class="muted small">Conteúdo educacional. Não é recomendação de investimento.</p>
+    </section>
+  </main>
+
+  <footer class="foot">Projeto de portfólio · HTML, CSS, JavaScript e Node.js</footer>
+  <script src="app.js"></script>
+</body>
+</html>

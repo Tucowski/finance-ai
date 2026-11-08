@@ -1,0 +1,13 @@
+{
+  "name": "finance-ai",
+  "version": "1.0.0",
+  "description": "Conversor de moedas, cotações da bolsa e assistente financeiro com IA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
